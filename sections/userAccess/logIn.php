@@ -1,5 +1,5 @@
 <?php
-$url_base = "http://localhost/digit/";
+$url_base = "http://localhost/project_stages/";
 
 include("../../templates/head.php");
 include("../../db.php");
@@ -32,7 +32,7 @@ if ($_POST) {
       $_SESSION['id'] = $id_usuario; 
        
 
-      header("location: index.php");
+      header("location: ../vista_user/index.php");
 
   }
 }

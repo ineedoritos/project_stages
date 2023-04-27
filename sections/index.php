@@ -1,5 +1,5 @@
 <?php 
-$url_base = "http://localhost/digit/";
+$url_base = "http://localhost/project_stages/";
 
 // if (!isset($_SESSION['usuario'])) {
 //     header("location:".$url_base."secciones/login.php");
