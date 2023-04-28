@@ -44,7 +44,7 @@ if ($_POST) {
 
 
 
-<div class="center-container redondeado">
+<!-- <div class="center-container redondeado">
 <div class="card text-center">
     <div class="card-header">
         <h1>Registrarse</h1>
@@ -98,8 +98,9 @@ if ($_POST) {
 
 
         <a class="p-size btn btn-outline-dark me-2 nav-item-size" href="<?php echo $url_base; ?>sections/userAccess/logIn.php">Ya tienes una cuenta?</a>
-    </div>
+    </div> -->
 
+    
    
 
 </div>
