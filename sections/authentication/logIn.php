@@ -25,14 +25,16 @@ if ($_POST) {
   //esta condición, verifica que si se encontraron resultados en la sentencia sql
   //vamos a crear las variables de sesión y redireccionamos, sino, tiramos un alert en el formulario
   if ($registro['n_usuarios'] > 0) {
-      $_SESSION['usuario'] = $registro['usuario'];
-      $_SESSION['logueado'] = true;
-      // Guardar el ID del usuario en una variable de sesión
-      $id_usuario = $registro['id'];
-      $_SESSION['id'] = $id_usuario; 
-       
-  }
-  header("location: ../vista_user/transacciones/home.php");
+    $_SESSION['usuario'] = $registro['usuario'];
+    $_SESSION['logueado'] = true;
+    // Guardar el ID del usuario en una variable de sesión
+    $id_usuario = $registro['id'];
+    $_SESSION['id'] = $id_usuario;  
+
+    header("location: ../vista_user/transacciones/home.php");
+  } else {
+    $mensaje = "Error: El usuario o la contraseña son incorrectos";
+}
 
 }
 
@@ -52,18 +54,24 @@ if ($_POST) {
       <div class="card text-center">
     <div class="card-header border border-3 border-dark rounded">
         <h1>Iniciar sesión</h1>
+        <?php if(isset($mensaje)){ ?>
+        <div class="alert alert-danger" role="alert">
+            <strong><h4><?php echo $mensaje;?></h4></strong>
+        </div>
+    <?php } ?>
     </div>
     <div class="card-body border border-3 border-dark rounded">
+
         <form method="post">
             <div class="mb-3">
               <label for="" class="form-label"><h4>Usuario</h4></label>
-              <input type="text" 
+              <input type="text"  required
               class="form-control redondeado border border-1 border-dark rounded" name="usuario" id="" aria-describedby="helpId" placeholder="Digite su usuario">
             </div>
 
             <div class="mb-3">
               <label for="" class="form-label"><h4>Contraseña</h4></label>
-              <input type="text" 
+              <input type="text" required
               class="form-control redondeado border border-1 border-dark rounded" name="password" id="" aria-describedby="helpId" placeholder="Digite su contraseña">
             </div>
 

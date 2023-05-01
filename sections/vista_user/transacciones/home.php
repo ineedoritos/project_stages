@@ -18,8 +18,9 @@ if (!isset($_SESSION['usuario'])) {
     </div>
     <div class="col-md-6 mx-auto text-center">
       <!-- Contenido de la columna central -->
-      <h1>Hola, ¿Qué deseas hacer hoy?</h1>
-      
+      <div class="alert alert-primary mt-5" role="alert">
+            <strong><h2>Hola ¿qué deseas hacer hoy?</h2></strong>
+        </div>      
       
       <div class="card-group mt-5 text-center">
 
