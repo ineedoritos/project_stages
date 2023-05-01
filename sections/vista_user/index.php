@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<p>Holiii</p>
+<?php 
+$url_base = "http://localhost/project_stages/";
 
-<a href="crear.php">registrar transacción</a>
+// if (!isset($_SESSION['usuario'])) {
+//     header("location:".$url_base."secciones/login.php");
+//   }
+include("../../templates/head.php");?>
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Stages</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Planifica tus gastos en étapas</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a type="button" href="../authentication/register.php" class="btn btn-lg px-4 gap-3 btn-dark">Regístrate ya! </a>
+      </div>
+    </div>
+  </div>
 
-<a href="../../cerrar.php">cerrar sesion</a>
-
-</body>
-</html>
+  
+<?php include("../../templates/footer.php");?>
