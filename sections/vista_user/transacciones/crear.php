@@ -66,7 +66,7 @@ if ($_POST) {
             <div class="mb-3">
                 <h6>Fecha de la transacción</h6>
               <input type="date" 
-              class="form-control redondeado border border-1 border-dark rounded" name="contraseña" id="" aria-describedby="helpId" placeholder="Ingrese la fecha de la transacción">
+              class="form-control redondeado border border-1 border-dark rounded" name="fecha" id="" aria-describedby="helpId" placeholder="Ingrese la fecha de la transacción">
             </div>
 
             <div class="mb-3">

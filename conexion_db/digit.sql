@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-04-2023 a las 23:56:15
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.2.0
+-- Tiempo de generación: 01-05-2023 a las 18:46:28
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,6 +31,8 @@ CREATE TABLE `transacciones` (
   `id_transaccion` int(11) NOT NULL,
   `tipo` varchar(255) NOT NULL,
   `cantidad` double NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `fecha` date NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -38,13 +40,10 @@ CREATE TABLE `transacciones` (
 -- Volcado de datos para la tabla `transacciones`
 --
 
-INSERT INTO `transacciones` (`id_transaccion`, `tipo`, `cantidad`, `id_usuario`) VALUES
-(1, 'ingreso', 600, 4),
-(2, 'egreso', 47, 4),
-(3, 'egreso', 87, 4),
-(4, 'egreso', 63, 4),
-(5, 'ingreso', 99, 4),
-(6, 'egreso', 50, 5);
+INSERT INTO `transacciones` (`id_transaccion`, `tipo`, `cantidad`, `descripcion`, `fecha`, `id_usuario`) VALUES
+(65, 'ingreso', 50, 'me lo depositaron', '2023-05-01', 17),
+(66, 'ingreso', 80, 'me lo volvieron a depositar', '2023-05-03', 17),
+(67, 'egreso', 90, 'lo gasté en el super', '2023-05-01', 17);
 
 -- --------------------------------------------------------
 
@@ -67,7 +66,9 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `usuario`, `password`, `salario`) VALUES
 (4, 'levi', 'levi', 'levi', 'levi', '900'),
-(5, 'victer', 'victer', 'victer', 'victer', '800544');
+(5, 'victer', 'victer', 'victer', 'victer', '800544'),
+(16, 'manuel', 'manuel', 'manuel', 'manuel', '1500'),
+(17, 'roxana', 'crisóstomo', 'rox', 'aaaa', '900');
 
 --
 -- Índices para tablas volcadas
@@ -94,13 +95,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  MODIFY `id_transaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_transaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas
