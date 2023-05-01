@@ -1,51 +1,88 @@
 <?php
 
-include("../../db.php");
-session_start();
+$url_base = "http://localhost/project_stages/";
 
+include("../../../templates/headUser.php");
+include("../../../conexion_db/db.php");
 
+$fk_usuario = $_SESSION["id"];
 
 if ($_POST) {
-    $tipo_transaccion = $_POST['tipo'];
-    $cantidad = $_POST["cantidad"];
-    $fk_cliente = $_SESSION['id'];
     
+    $tipo = $_POST["tipo"];
+    $cantidad = $_POST["cantidad"];
+    $fecha = $_POST["fecha"];
+    $descripcion = $_POST["descripcion"];
 
-    $sentencia = $conexion->prepare("INSERT INTO transacciones (id_transaccion, tipo, cantidad, id_usuario) VALUES (null, :tipo, :cantidad, :id_usuario)");
+    $sentencia = $conexion->prepare("INSERT INTO transacciones (id_transaccion,tipo,cantidad,descripcion,fecha,id_usuario)
+    VALUES (null,:tipo,:cantidad,:descripcion,:fecha,:id_usuario)");
 
-    $sentencia->bindParam(":tipo",$tipo_transaccion);
-    $sentencia->bindParam(":cantidad",$cantidad);
-    $sentencia->bindParam(":id_usuario",$fk_cliente);
+    $sentencia->bindParam(":tipo", $tipo);
+    $sentencia->bindParam(":cantidad", $cantidad);
+    $sentencia->bindParam(":descripcion", $descripcion);
+    $sentencia->bindParam(":fecha", $fecha);
+    $sentencia->bindParam(":id_usuario", $fk_usuario);
+
     $sentencia->execute();
 }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>registrar transaccion</h1>
-    <hr>
-    <form method="post">
-        <h1>Tipo de transaccion</h1>
-        <select name="tipo" id="">
-            <option value="" disabled></option>
+<div class="center-container redondeado">
+<div class="row">
+    <div class="col-md-3">
+      <!-- Contenido de la columna izquierda -->
+    </div>
+    <div class="col-md-6 mt-5">
+      <!-- Contenido de la columna central -->
+      <div class="card text-center">
+    <div class="card-header border border-3 border-dark rounded">
+        <h1>Registrar transacción</h1>
+    </div>
+    <div class="card-body border border-3 border-dark rounded">
+        <form method="post">
+
+
+        <div class="mb-3">
+        <select class="form-select border border-1 border-dark rounded" name="tipo" aria-label="Default select example">
+            <option selected disabled>Tipo de transacción</option>
             <option value="ingreso">Ingreso</option>
             <option value="egreso">Egreso</option>
         </select>
-        <br><br>
-        <h1>cantidad</h1>
-<input type="number" name="cantidad">
-        <br><br><br>
-        <input type="submit" value="enviar">
-        <!--input para id de usuario-->
-    </form>
-    <a href="index.php">regresar</a>
-</body>
-</html>
+            </div>
+
+            <div class="mb-3">
+              <input type="number" 
+              class="form-control redondeado border border-1 border-dark rounded" name="cantidad" id="" aria-describedby="helpId" placeholder="Digite La cantidad">
+            </div>
+
+            
+            <div class="mb-3">
+              <input type="text" 
+              class="form-control redondeado border border-1 border-dark rounded" name="descripcion" id="" aria-describedby="helpId" placeholder="Digite el motivo / descripción">
+            </div>
+
+            
+            <div class="mb-3">
+                <h6>Fecha de la transacción</h6>
+              <input type="date" 
+              class="form-control redondeado border border-1 border-dark rounded" name="contraseña" id="" aria-describedby="helpId" placeholder="Ingrese la fecha de la transacción">
+            </div>
+
+            <div class="mb-3">
+              <input type="submit"
+                class="btn btn-success" aria-describedby="helpId" >
+                <a name="" id="" class="btn btn-danger" href="home.php" role="button">Regresar</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+    </div>
+    <div class="col-md-3">
+      <!-- Contenido de la columna derecha -->
+    </div>
+  </div>
+</div>
+
+<?php include("../../../templates/footer.php"); ?>

@@ -6,10 +6,8 @@ include("../../../templates/headUser.php");
 include("../../../conexion_db/db.php");
 
 if (!isset($_SESSION['usuario'])) {
-    header("location:".$url_base."sections/authentication/logIn.php");
-  }
-
-
+  header("location:".$url_base."sections/authentication/logIn.php");
+}
 ?>
 
 <body>
@@ -26,7 +24,7 @@ if (!isset($_SESSION['usuario'])) {
       <div class="card-group mt-5 text-center">
 
 
-  <div class="card">
+  <div class="card p-3">
     <a href="crear.php" class="text-decoration-none">
     <img src="../../../img/agregar.png" class="card-img-top" alt="...">
     <div class="card-body">
@@ -36,7 +34,7 @@ if (!isset($_SESSION['usuario'])) {
   </div>
 
 
-  <div class="card">
+  <div class="card p-3">
     <a href="total_activos.php" class="text-decoration-none">
     <img src="../../../img/digit.png" class="card-img-top" alt="...">
     <div class="card-body">
@@ -46,7 +44,7 @@ if (!isset($_SESSION['usuario'])) {
   </div>
 
 
-  <div class="card">
+  <div class="card p-3">
     <a href="../../../conexion_db/cerrar.php" class="text-decoration-none">
     <img src="../../../img/cerrar.png" class="card-img-top" alt="...">
     <div class="card-body">

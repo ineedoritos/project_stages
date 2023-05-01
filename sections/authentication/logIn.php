@@ -31,10 +31,9 @@ if ($_POST) {
       $id_usuario = $registro['id'];
       $_SESSION['id'] = $id_usuario; 
        
-
-      header("location: ../vista_user/transacciones/home.php");
-
   }
+  header("location: ../vista_user/transacciones/home.php");
+
 }
 
 
@@ -48,7 +47,7 @@ if ($_POST) {
     <div class="col-md-3">
       <!-- Contenido de la columna izquierda -->
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 mt-5">
       <!-- Contenido de la columna central -->
       <div class="card text-center">
     <div class="card-header border border-3 border-dark rounded">

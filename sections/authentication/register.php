@@ -16,10 +16,6 @@ if ($_POST) {
     $salario = (isset($_POST['salario']) ? $_POST["salario"]:"");
 
 
-
-
-
-
     $sentencia = $conexion->prepare("INSERT INTO usuarios (id, nombre, apellido, usuario , password, salario) VALUES (null, :nombre, :apellido, :usuario, :password, :salario)");
     $sentencia->bindParam(":nombre",$nombre);
     $sentencia->bindParam(":apellido",$apellido);
@@ -27,6 +23,8 @@ if ($_POST) {
     $sentencia->bindParam(":password",$password);
     $sentencia->bindParam(":salario",$salario);
     $sentencia->execute();
+
+    header("Location: logIn.php");
     
 }
 
@@ -37,9 +35,8 @@ if ($_POST) {
     <div class="col-md-3">
       <!-- Contenido de la columna izquierda -->
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 mt-5">
       <!-- Contenido de la columna central -->
-      <br><br>
       <div class="card text-center">
     <div class="card-header border border-3 border-dark rounded">
         <h1>Registrate</h1>
@@ -50,12 +47,12 @@ if ($_POST) {
 
         <div class="mb-3">
               <input type="text" 
-              class="form-control redondeado border border-1 border-dark rounded" name="nombres" id="" aria-describedby="helpId" placeholder="Digite sus nombres">
+              class="form-control redondeado border border-1 border-dark rounded" name="nombre" id="" aria-describedby="helpId" placeholder="Digite sus nombres">
             </div>
 
             <div class="mb-3">
               <input type="text" 
-              class="form-control redondeado border border-1 border-dark rounded" name="apellidos" id="" aria-describedby="helpId" placeholder="Digite sus apellidos">
+              class="form-control redondeado border border-1 border-dark rounded" name="apellido" id="" aria-describedby="helpId" placeholder="Digite sus apellidos">
             </div>
 
             
@@ -67,7 +64,7 @@ if ($_POST) {
             
             <div class="mb-3">
               <input type="text" 
-              class="form-control redondeado border border-1 border-dark rounded" name="contraseña" id="" aria-describedby="helpId" placeholder="Digite su contraseña">
+              class="form-control redondeado border border-1 border-dark rounded" name="password" id="" aria-describedby="helpId" placeholder="Digite su contraseña">
             </div>
 
             
