@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-05-2023 a las 18:46:28
+-- Tiempo de generación: 03-05-2023 a las 06:59:33
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -41,9 +41,9 @@ CREATE TABLE `transacciones` (
 --
 
 INSERT INTO `transacciones` (`id_transaccion`, `tipo`, `cantidad`, `descripcion`, `fecha`, `id_usuario`) VALUES
-(65, 'ingreso', 50, 'me lo depositaron', '2023-05-01', 17),
-(66, 'ingreso', 80, 'me lo volvieron a depositar', '2023-05-03', 17),
-(67, 'egreso', 90, 'lo gasté en el super', '2023-05-01', 17);
+(78, 'egreso', 50, 'lo gasté en yogurts', '2023-05-02', 18),
+(79, 'egreso', 25, 'sjknsf', '2023-05-18', 18),
+(80, 'egreso', 36, 'ndjsfnr', '2023-05-10', 18);
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,7 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `usuario`, `password`, `sala
 (4, 'levi', 'levi', 'levi', 'levi', '900'),
 (5, 'victer', 'victer', 'victer', 'victer', '800544'),
 (16, 'manuel', 'manuel', 'manuel', 'manuel', '1500'),
-(17, 'roxana', 'crisóstomo', 'rox', 'aaaa', '900');
+(18, 'armande', 'armande', 'armande', 'armande', '800');
 
 --
 -- Índices para tablas volcadas
@@ -95,13 +95,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `transacciones`
 --
 ALTER TABLE `transacciones`
-  MODIFY `id_transaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id_transaccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas

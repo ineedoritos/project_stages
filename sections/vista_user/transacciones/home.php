@@ -5,9 +5,7 @@ $url_base = "http://localhost/project_stages/";
 include("../../../templates/headUser.php");
 include("../../../conexion_db/db.php");
 
-if (!isset($_SESSION['usuario'])) {
-  header("location:".$url_base."sections/authentication/logIn.php");
-}
+
 ?>
 
 <body>
@@ -18,7 +16,7 @@ if (!isset($_SESSION['usuario'])) {
     </div>
     <div class="col-md-6 mx-auto text-center">
       <!-- Contenido de la columna central -->
-      <div class="alert alert-primary mt-5" role="alert">
+      <div class="alert bg-primary text-white mt-5" role="alert">
             <strong><h2>Hola ¿qué deseas hacer hoy?</h2></strong>
         </div>      
       

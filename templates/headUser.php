@@ -2,7 +2,9 @@
 $url_base = "http://localhost/project_stages/";
 session_start();
 
-
+if (!isset($_SESSION['usuario'])) {
+  header("location:".$url_base."sections/authentication/logIn.php");
+}
 
 ?>
 <!DOCTYPE html>
@@ -23,6 +25,7 @@ session_start();
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        overflow-x: hidden;
       }
     </style>
 </head>

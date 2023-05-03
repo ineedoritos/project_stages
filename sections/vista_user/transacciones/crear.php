@@ -36,11 +36,11 @@ if ($_POST) {
     <div class="col-md-6 mt-5">
       <!-- Contenido de la columna central -->
       <div class="card text-center">
-    <div class="card-header border border-3 border-dark rounded">
+    <div class="card-header border border-3 border-dark rounded bg-dark text-white">
         <h1>Registrar transacción</h1>
     </div>
-    <div class="card-body border border-3 border-dark rounded">
-        <form method="post">
+    <div class="card-body bg-dark text-white">
+        <form method="post" class="bg-dark text-white">
 
 
         <div class="mb-3">

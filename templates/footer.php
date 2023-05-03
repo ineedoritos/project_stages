@@ -4,7 +4,6 @@ $url_base = "http://localhost/project_stages/";
 
 <footer class="text-center text-white fixed-bottom" style="background-color: #232b2b;">
   <!-- Grid container -->
-  <div class="container p-4"></div>
   <!-- Grid container -->
 
   <!-- Copyright -->
