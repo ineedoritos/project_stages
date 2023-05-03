@@ -160,7 +160,7 @@ $sentencia = "SELECT fecha, tipo, cantidad, descripcion FROM transacciones WHERE
                         echo "</tbody>";
                         echo "</table>"; 
                     } else if ($resultado->rowCount() == 0) {
-                        echo "<div class='alert alert-danger text-center role='alert'>";
+                        echo "<div class='alert  text-center bg-warning role='alert'>";
                         echo "<strong><h4>Parece que no has registrado ningún tipo de transacción</h4></strong>";
                         echo "</div>";
                     }
