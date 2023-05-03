@@ -37,7 +37,7 @@ if ($_POST) {
     </div>
     <div class="col-md-6 mt-5">
       <!-- Contenido de la columna central -->
-      <div class="card text-center">
+      <div class="card text-center bg-dark text-white">
     <div class="card-header border border-3 border-dark rounded">
         <h1>Registrate</h1>
     </div>
@@ -78,7 +78,7 @@ if ($_POST) {
                 class="btn btn-success" aria-describedby="helpId" >
             </div>
         </form>
-        <a class="p-size btn btn-outline-dark me-2 nav-item-size" href="logIn.php">¿Ya tienes una cuenta? Inicia sesión!</a>
+        <a class="p-size btn btn-outline-light me-2 nav-item-size" href="logIn.php">¿Ya tienes una cuenta? Inicia sesión!</a>
     </div>
 
 </div>
