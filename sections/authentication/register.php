@@ -63,7 +63,7 @@ if ($_POST) {
 
             
             <div class="mb-3">
-              <input type="text" 
+              <input type="password" 
               class="form-control redondeado border border-1 border-dark rounded" name="password" id="" aria-describedby="helpId" placeholder="Digite su contraseña">
             </div>
 

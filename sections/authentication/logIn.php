@@ -68,7 +68,7 @@ if ($_POST) {
 
             <div class="mb-3">
               <label for="" class="form-label"><h4>Contraseña</h4></label>
-              <input type="text" required
+              <input type="password" required
               class="form-control redondeado border border-1 border-dark rounded" name="password" id="" aria-describedby="helpId" placeholder="Digite su contraseña">
             </div>
 
