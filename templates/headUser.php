@@ -27,6 +27,17 @@ if (!isset($_SESSION['usuario'])) {
         background-attachment: fixed;
         overflow-x: hidden;
       }
+
+      .borde {
+        border: solid 1px #fff;
+
+      }
+
+      .hover-effect:hover {
+        border: solid 5px #fff;
+        border-radius: 15px;
+
+      }
     </style>
 </head>
 <nav class="navbar navbar-expand-lg data-bs-toggle bg-dark text-white" >
