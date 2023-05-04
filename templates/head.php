@@ -18,7 +18,7 @@ $url_base = "http://localhost/project_stages/";
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        overflow: hidden;
+        overflow-x: hidden;
       }
     </style>
 </head>

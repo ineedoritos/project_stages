@@ -46,35 +46,35 @@ if ($_POST) {
 
 
         <div class="mb-3">
-              <input type="text" 
+              <input type="text" required
               class="form-control redondeado border border-1 border-dark rounded" name="nombre" id="" aria-describedby="helpId" placeholder="Digite sus nombres">
             </div>
 
             <div class="mb-3">
-              <input type="text" 
+              <input type="text" required
               class="form-control redondeado border border-1 border-dark rounded" name="apellido" id="" aria-describedby="helpId" placeholder="Digite sus apellidos">
             </div>
 
             
             <div class="mb-3">
-              <input type="text" 
+              <input type="text" required
               class="form-control redondeado border border-1 border-dark rounded" name="usuario" id="" aria-describedby="helpId" placeholder="Digite su usuario">
             </div>
 
             
             <div class="mb-3">
-              <input type="password" 
+              <input type="password" required
               class="form-control redondeado border border-1 border-dark rounded" name="password" id="" aria-describedby="helpId" placeholder="Digite su contraseña">
             </div>
 
             
             <div class="mb-3">
-              <input type="number" step="0.01" 
+              <input type="number" step="0.01" required
               class="form-control redondeado border border-1 border-dark rounded" name="salario" id="" aria-describedby="helpId" placeholder="Digite su salario">
             </div>
 
             <div class="mb-3">
-              <input type="submit"
+              <input type="submit" 
                 class="btn btn-success" aria-describedby="helpId" >
             </div>
         </form>

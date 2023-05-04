@@ -46,7 +46,7 @@ if ($_POST) {
     <div class="col-md-3">
       <!-- Contenido de la columna izquierda -->
     </div>
-    <div class="col-md-6 mt-5">
+    <div class="col-md-6 p-2">
       <!-- Contenido de la columna central -->
       <div class="card text-center bg-dark text-white">
     <div class="card-header border border-3 border-dark rounded">
