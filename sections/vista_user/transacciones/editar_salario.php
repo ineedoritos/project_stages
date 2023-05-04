@@ -33,10 +33,10 @@ if ($_POST) {
     <div class="col-md-6 mt-5">
       <!-- Contenido de la columna central -->
       <div class="card text-center">
-    <div class="card-header border border-3 border-dark rounded">
+    <div class="card-header rounded bg-dark text-white">
         <h1>Modificar mi salario</h1>
     </div>
-    <div class="card-body border border-3 border-dark rounded">
+    <div class="card-body bg-dark text-white rounded">
 
         <form method="post">
             <div class="mb-3">
@@ -50,6 +50,8 @@ if ($_POST) {
             <div class="mb-3">
               <input type="submit"
                 class="btn btn-success" aria-describedby="helpId" >
+                <a name="" id="" class="btn btn-danger" href="home.php" role="button">Regresar</a>
+
             </div>
         </form>
     </div>
