@@ -46,7 +46,7 @@ if ($_POST) {
     <div class="col-md-3">
       <!-- Contenido de la columna izquierda -->
     </div>
-    <div class="col-md-6 p-2">
+    <div class="col-md-6 mt-5">
       <!-- Contenido de la columna central -->
       <div class="card text-center bg-dark text-white">
     <div class="card-header border border-3 border-dark rounded">
@@ -75,6 +75,7 @@ if ($_POST) {
             <div class="mb-3">
               <input type="submit"
                 class="btn btn-success" aria-describedby="helpId" >
+                <a name="" id="" class="btn btn-danger" href="../vista_user/index.php" role="button">Regresar</a>
             </div>
         </form>
         <a class="p-size btn btn-outline-light me-2 nav-item-size" href="register.php">¿No tienes una cuenta? Registrate</a>
