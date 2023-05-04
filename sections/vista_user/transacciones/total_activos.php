@@ -87,7 +87,7 @@ $sentencia = "SELECT id_transaccion, fecha, tipo, cantidad, descripcion FROM tra
 
             <div class=" alert bg-dark text-white text-center m-1">
                     <h5>Mi salario: <?php echo " $".$resultado_salario['salario']; ?></h5>
-                    <h5>Saldo disponible: <?php echo " " . ($resultado_saldo_disponible['saldo_disponible'] > 0 ? $resultado_saldo_disponible['saldo_disponible']
+                    <h5>Saldo disponible: <?php echo " $" . ($resultado_saldo_disponible['saldo_disponible'] > 0 ? $resultado_saldo_disponible['saldo_disponible']
                      : "$0.00 (Ya no tienes fondos disponibles)"); ?></h5>
 
 
