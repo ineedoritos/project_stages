@@ -8,14 +8,18 @@ $fk_usuario = $_SESSION["id"];
 
 //filtro de fechas
 $sentencia = "SELECT id_transaccion, fecha, tipo, cantidad, descripcion FROM transacciones WHERE id_usuario = {$_SESSION['id']}";
-  if (isset($_POST['fecha_inicio']) && isset($_POST['fecha_fin'])) {
-    $fecha_inicio = $_POST['fecha_inicio'];
-    $fecha_fin = $_POST['fecha_fin'];
-    // Agregar las fechas a la consulta SQL si están presentes en el formulario
-    if (!empty($fecha_inicio) && !empty($fecha_fin)) {
-      $sentencia .= " AND fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'";
-    }
+
+if (isset($_POST['fecha_inicio']) && isset($_POST['fecha_fin'])) {
+  $fecha_inicio = $_POST['fecha_inicio'];
+  $fecha_fin = $_POST['fecha_fin'];
+  // Agregar las fechas a la consulta SQL si están presentes en el formulario
+  if (!empty($fecha_inicio) && !empty($fecha_fin)) {
+    $sentencia .= " AND fecha BETWEEN '$fecha_inicio' AND '$fecha_fin'";
   }
+}
+
+$sentencia .= " ORDER BY fecha ASC;";
+
 
   $resultado = $conexion->query($sentencia);
   $ingresos = 0;
@@ -86,8 +90,8 @@ $sentencia = "SELECT id_transaccion, fecha, tipo, cantidad, descripcion FROM tra
             <!-- Contenido de la columna izquierda -->
 
             <div class=" alert bg-dark text-white text-center m-1">
-                    <h5>Mi salario: <?php echo " $".$resultado_salario['salario']; ?></h5>
-                    <h5>Saldo disponible: <?php echo " $" . ($resultado_saldo_disponible['saldo_disponible'] > 0 ? $resultado_saldo_disponible['saldo_disponible']
+                    <h5>Mi salario: <?php echo " $". number_format($resultado_salario['salario'],2); ?></h5>
+                    <h5>Saldo disponible: <?php echo " $" . ($resultado_saldo_disponible['saldo_disponible'] > 0 ? number_format ($resultado_saldo_disponible['saldo_disponible'],2)
                      : "$0.00 (Ya no tienes fondos disponibles)"); ?></h5>
 
 

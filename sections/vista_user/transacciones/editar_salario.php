@@ -41,7 +41,7 @@ if ($_POST) {
         <form method="post">
             <div class="mb-3">
               <label for="" class="form-label"><h4>Ingrese el nuevo salario</h4></label>
-              <input type="number"  required
+              <input type="number" step="0.01"  required
               class="form-control redondeado border border-1 border-dark rounded" name="new_salario" id="" aria-describedby="helpId" placeholder="Digite su nuevo salario">
             </div>
 

@@ -69,7 +69,7 @@ if ($_POST) {
 
             
             <div class="mb-3">
-              <input type="number" 
+              <input type="number" step="0.01" 
               class="form-control redondeado border border-1 border-dark rounded" name="salario" id="" aria-describedby="helpId" placeholder="Digite su salario">
             </div>
 
