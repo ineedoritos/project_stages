@@ -92,7 +92,7 @@ $sentencia .= " ORDER BY fecha ASC;";
             <div class=" alert bg-dark text-white text-center m-1">
                     <h5>Mi salario: <?php echo " $". number_format($resultado_salario['salario'],2); ?></h5>
                     <h5>Saldo disponible: <?php echo " $" . ($resultado_saldo_disponible['saldo_disponible'] > 0 ? number_format ($resultado_saldo_disponible['saldo_disponible'],2)
-                     : "$0.00 (Ya no tienes fondos disponibles)"); ?></h5>
+                     : "0.00 (Ya no tienes fondos disponibles)"); ?></h5>
 
 
                     <a href="editar_salario.php" class="text-decoration-none text-white">

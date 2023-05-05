@@ -6,6 +6,7 @@ include("../../../templates/headUser.php");
 include("../../../conexion_db/db.php");
 
 $fk_usuario = $_SESSION["id"];
+$id_transaccion = $_GET['txtID'];
 
 if ($_POST) {
     
@@ -14,18 +15,17 @@ if ($_POST) {
     $fecha = $_POST["fecha"];
     $descripcion = $_POST["descripcion"];
 
-    $sentencia = $conexion->prepare("UPDATE transacciones SET
-    tipo = IFNULL(:tipo, tipo),
-    cantidad = IFNULL(:cantidad, cantidad),
-    descripcion = IFNULL(:descripcion, descripcion),
-    fecha = IFNULL(:fecha, fecha)
-    WHERE id_transaccion = :id_transaccion");
+    $sentencia = $conexion->prepare("UPDATE transacciones SET 
+    tipo = :tipo, cantidad = :cantidad, descripcion = :descripcion, fecha = :fecha
+    WHERE transacciones.id_transaccion = :id_transaccion;
+    ");
+    
 
     $sentencia->bindParam(":tipo", $tipo);
     $sentencia->bindParam(":cantidad", $cantidad);
     $sentencia->bindParam(":descripcion", $descripcion);
     $sentencia->bindParam(":fecha", $fecha);
-    $sentencia->bindParam(":id_transaccion", $srow['id_transaccion']);
+    $sentencia->bindParam(":id_transaccion", $id_transaccion);
 
     $sentencia->execute();
 
